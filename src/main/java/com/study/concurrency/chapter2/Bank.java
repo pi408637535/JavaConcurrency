@@ -15,15 +15,15 @@ class TicketWindow implements Runnable{
     @Override
     public synchronized void  run() {
 
-        while (true){
-            notifyAll();
+        while (num > 0){
+//            notifyAll();
             System.out.println(this.name + "--" + num);
             num -= 1;
-            try {
-                wait();
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+//            try {
+//                wait();
+//            } catch (InterruptedException e) {
+//                e.printStackTrace();
+//            }
         }
     }
 }
